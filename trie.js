@@ -23,24 +23,31 @@ Trie.prototype.create = function (route) {
 
     if (thisRoute === undefined) return trie
 
+    console.log('Recursively creating new node, because routes[' + index + '] is not undefined:', routes)
     var node = null
     if (/^:/.test(thisRoute)) {
+      console.log('Route starts with :')
       // if node is a name match, set name and append to ':' node
       if (!trie.nodes['$$']) {
+        console.log('Creating new node $$')
         node = { nodes: {} }
         trie.nodes['$$'] = node
       } else {
+        console.log('Using existing node $$')
         node = trie.nodes['$$']
       }
       trie.name = thisRoute.replace(/^:/, '')
     } else if (!trie.nodes[thisRoute]) {
+      console.log('Creating new node')
       node = { nodes: {} }
       trie.nodes[thisRoute] = node
     } else {
+      console.log('Using existing node')
       node = trie.nodes[thisRoute]
     }
 
     // we must recurse deeper
+    console.log('Recursing...')
     return createNode(index + 1, node)
   })(0, this.trie)
 }
