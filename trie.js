@@ -18,7 +18,8 @@ Trie.prototype.create = function (route) {
   assert.equal(typeof route, 'string', 'route should be a string')
   // strip leading '/' and split routes
   var routes = route.replace(/^\//, '').split('/')
-  return (function createNode (index, trie) {
+
+  function createNode (index, trie) {
     var thisRoute = routes[index]
 
     if (thisRoute === undefined) return trie
@@ -49,7 +50,9 @@ Trie.prototype.create = function (route) {
     // we must recurse deeper
     console.log('Recursing...', index + 1, node)
     return createNode(index + 1, node)
-  })(0, this.trie)
+  }
+
+  return createNode(0, this.trie)
 }
 
 // match a route on the trie
