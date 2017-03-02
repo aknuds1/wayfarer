@@ -1,13 +1,13 @@
 {
-  "name": "wayfarer",
-  "version": "6.4.0",
+  "name": "@arve.knudsen/wayfarer",
+  "version": "6.4.1",
   "description": "Composable trie based router",
   "main": "index.js",
   "scripts": {
     "test": "standard && NODE_ENV=test tape test/*",
     "test-cov": "NODE_ENV=test istanbul cover tape -- test/*"
   },
-  "repository": "yoshuawuyts/wayfarer",
+  "repository": "aknuds1/wayfarer",
   "keywords": [
     "router",
     "trie",
