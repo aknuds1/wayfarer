@@ -47,7 +47,7 @@ Trie.prototype.create = function (route) {
     }
 
     // we must recurse deeper
-    console.log('Recursing...')
+    console.log('Recursing...', index + 1, node)
     return createNode(index + 1, node)
   })(0, this.trie)
 }
