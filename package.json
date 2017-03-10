@@ -1,6 +1,6 @@
 {
   "name": "@arve.knudsen/wayfarer",
-  "version": "6.4.6",
+  "version": "6.5.0",
   "description": "Composable trie based router",
   "main": "index.js",
   "scripts": {
