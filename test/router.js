@@ -213,4 +213,3 @@ tape('trie', function (t) {
     r('/foo/bar/beep/boop')
   })
 })
-

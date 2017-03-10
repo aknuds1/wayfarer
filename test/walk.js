@@ -1,5 +1,5 @@
 const wayfarer = require('../')
-const walk = require('../walk')
+const walk = require('../walk.min')
 const noop = require('noop2')
 const tape = require('tape')
 
